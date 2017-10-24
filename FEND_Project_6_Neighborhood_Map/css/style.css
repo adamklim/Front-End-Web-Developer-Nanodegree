@@ -1,0 +1,108 @@
+#map {
+    bottom:0px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+}
+
+/*======side menu=======*/
+
+/*Pure CSS hiding menu, code modified from the source: https://www.sitepoint.com/pure-css-off-screen-navigation-menu */
+
+h1 {
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 2em;
+}
+
+.navigation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  background: #777;
+}
+
+.nav-item {
+  display: block;
+  padding: 0.5em 1.5em;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item-input {
+  display: block;
+  padding: 0.5em 1.5em;
+  margin-left: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+  width: 225px;
+}
+
+li:hover {
+  color: #ed1211;
+}
+
+.site-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  /*background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");*/
+  background-image: url("../images/icon.svg");
+  background-size: contain;
+}
+
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 265px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 250px;
+  /*box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);*/
+}
+
+body {
+  overflow-x: hidden;
+}
+
+code {
+    padding: 2px;
+    background: #ddd;
+}
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }

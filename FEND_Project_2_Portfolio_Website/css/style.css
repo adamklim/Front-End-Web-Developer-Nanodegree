@@ -1,0 +1,225 @@
+/*global settings*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    color: #888;
+}
+
+/*default settings 3 column flex layout*/
+
+header {
+    display: flex;
+    max-width: 1200px;
+    margin-top: 2em;
+}
+
+footer {
+    margin-top: 5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 200;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 200;
+    padding-left: 15px;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+hr,
+p {
+    margin: 10px;
+}
+
+.personal-id {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.mainimage,
+.contentimage {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.container,
+.flexcontent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.flexcontent {
+    font-size: 1.5em;
+}
+
+.footimage {
+    max-width: 28px;
+    max-height: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.caption {
+    text-align: center;
+    font-weight: 100;
+}
+
+.logo {
+    max-width: 150px;
+    margin-left: 10px;
+}
+
+
+/*small screens*/
+@media only screen and (max-width : 667px) {
+
+    body {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 2em;
+    }
+    h3 {
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    footer {
+        margin-top: -2em;
+    }
+
+    .container,
+    .flexcontent {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .logo,
+    .personal-id {
+        align-self: center;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .flexcontent {
+        max-width: 480px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .col-4,
+    .col-3,
+    .col-9 {
+        width: 100%;
+    }
+
+    .caption {
+        margin-bottom: 3em;
+    }
+
+    .flexcontent > :nth-child(1) { order: 3;}
+    .flexcontent > :nth-child(2) { order: 2;}
+    .flexcontent > :nth-child(3) { order: 1;}
+
+    .footimage {
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
+
+/*medium screens*/
+@media only screen and (min-width : 668px) and (max-width : 991px) {
+
+    body {
+        max-width: 747px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+/*large screens*/
+@media only screen and (min-width : 992px) {
+
+    body {
+        max-width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .contentimage {
+      filter: grayscale(100%);
+    }
+
+    .contentimage:hover {
+      filter: grayscale(0);
+    }
+}
