@@ -1,2 +1,2 @@
 # Front-End-Web-Developer-Nanodegree
-[png](nd001.png)
+<img src="nd001.png" style="width: 600px;"/>
